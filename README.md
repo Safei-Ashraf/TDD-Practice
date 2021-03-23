@@ -1,4 +1,4 @@
-# some of my personal notes on my learning journy toward TDD and Cypress.
+# some of my personal notes on my learning journy toward Agile development, TDD and Cypress.
 
 
 **mixed up from different resources, all mentioned at the end ot this section, followed by README for the practice project.**
@@ -12,22 +12,101 @@ some of the common agile development practices:(mostly development practices)
 
 
 • Small Stories: we break the work up into minimum units of user-visible functionality.
-		○ For example, rather than building out the entire data layer at once, we build out just enough of the data later to get one feature working, along with the corresponding business logic and user interface. We finish that work and make it available for review. Then we start the next story, and add another slice of data layer, business logic, and user interface.
+
+
+		○ For example, rather than building out the entire data layer at once, we build out just enough of the data later
 		
-	• Evolutionary Design: as we're adding this functionality story-by-story, we don't try to think ahead for everything our application will need and design an architecture that will accommodate it—because we know we'll be wrong. Instead, we strive to make the system the best design for its functionality as it stands today, for this story. When the next story starts, then we adjust the design of the system to match the new functionality. As a result of making these changes, we should never have a system that is either underdesigned with hacked-in changes or overdesigned with unused flexibility.
-	
-	• Test-Driven Development: as we build our stories, we write the test first, and only write production code in response to a failing test. This ensures that every bit of our functionality is covered by test, so that as we adjust the functionality of our system for new stories we know nothing breaks. Such test coverage significantly reduces the need for manual testing, so that our application can grow without the manual testing time increasing indefinitely. TDD also helps us identify and fix design issues in our code that could cause future development slowdown.
-	
-	• Refactoring: at several different parts of the agile process, we refactor: we change the arrangement of the code without changing its functionality. 
-		○  As part of the TDD cycle, we refactor our code as the third step to make it clearer and simpler. When we are looking to add new functionality, we also consider if we can rearrange the code to a new form that better prepares it for adding the new functionality.
 		
-	• Code Review: as we finish a feature, we push it up to our version control system and open a pull request, which presents the changes for a team member to review. This gives team members a chance to catch bugs and suggest improvements. It also allows them to familiarize themselves with the code so they will not be surprised by it when they need to work on it in the future.
-	• Continuous Integration: when a pull request is opened, a Continuous Integration service runs our tests on the branch of code to ensure that our entire suite passes
-		○  This means that even if we forget to run the tests ourselves, they will still be run before the PR can be merged. It also ensures the application can run in a new environment, and is not dependent on something implicit in our development environment.
-	• Continuous Delivery: agile teams have the ability to release their system at a moment's notice at any time. This includes ensuring that the main source control branch is never broken and doesn't include incomplete work. It also means that the steps to release are automated. 
-		○  This doesn't mean that the team necessarily does release to production every time a new feature is completed, but they have the means to do so.
-	• Abstractions: agile teams are more interested in delivering business value than custom designing every piece of their application. They use abstractions and shared libraries when they meet the app's needs rather than rewriting them unnecessarily.
-		○ The abstractions they reach for might include community standard build setups, UI libraries, full-stack backend frameworks, and hosting solutions like Netlify and Heroku. When the team finds that an abstraction doesn't meet their needs, then and only then do they write lower-level code themselves.
+		to get one feature working, along with the corresponding business logic and user interface.
+		
+		We finish that work and make it available for review. Then we start the next story, and add another slice of data layer, business logic, and user interface.
+		
+	• Evolutionary Design:
+	
+	as we're adding this functionality story-by-story, we don't try to think ahead for everything our application will need
+	
+	and design an architecture that will accommodate it—because we know we'll be wrong.
+	
+	Instead, we strive to make the system the best design for its functionality as it stands today, for this story.
+	
+	When the next story starts, then we adjust the design of the system to match the new functionality.
+	
+	As a result of making these changes, we should never have a system that is either underdesigned with hacked-in changes or overdesigned with unused flexibility.
+	
+	• Test-Driven Development:
+	
+	as we build our stories, we write the test first, and only write production code in response to a failing test. 
+	
+	This ensures that every bit of our functionality is covered by test, so that as we adjust the functionality of our system for
+	
+	new stories we know nothing breaks.
+	
+	Such test coverage significantly reduces the need for manual testing, so that our application can grow without the manual 
+	
+	testing time increasing indefinitely.
+	
+	TDD also helps us identify and fix design issues in our code that could cause future development slowdown.
+	
+	• Refactoring: at several different parts of the agile process, we refactor: we change the arrangement of the code without changing its
+	
+	functionality. 
+	
+	
+		○  As part of the TDD cycle, we refactor our code as the third step to make it clearer and simpler.
+		
+		When we are looking to add new functionality, we also consider if we can rearrange the code to a new form that better 
+		
+		prepares it for adding the new functionality.
+		
+		
+	• Code Review:
+	
+	as we finish a feature, we push it up to our version control system and open a pull request, which presents the changes for 
+	
+	a team member to review. 
+	
+	This gives team members a chance to catch bugs and suggest improvements. It also allows them to familiarize themselves with the code 
+	
+	so they will not be surprised by it when they need to work on it in the future.
+	
+	
+	• Continuous Integration:
+	
+	when a pull request is opened, a Continuous Integration service runs our tests on the branch of code to ensure that our entire suite passes
+	
+	
+		○  This means that even if we forget to run the tests ourselves, they will still be run before the PR can be merged. It also ensures
+		
+		the application can run in a new environment, and is not dependent on something implicit in our development environment.
+		
+		
+	• Continuous Delivery: 
+	
+	agile teams have the ability to release their system at a moment's notice at any time. 
+	
+	This includes ensuring that the main source control branch is never broken and doesn't include incomplete work.
+	
+	It also means that the steps to release are automated. 
+	
+	
+		○  This doesn't mean that the team necessarily does release to production every time a new feature is completed,
+		
+		but they have the means to do so.
+		
+		
+	• Abstractions:
+	
+	agile teams are more interested in delivering business value than custom designing every piece of their application.
+	
+	They use abstractions and shared libraries when they meet the app's needs rather than rewriting them unnecessarily.
+	
+	
+		○ The abstractions they reach for might include community standard build setups, UI libraries, full-stack backend frameworks, 
+		
+		and hosting solutions like Netlify and Heroku. When the team finds that an abstraction doesn't meet their needs, then and only 
+		
+		then do they write lower-level code themselves.
+
 
 
 ##  Agile Team Practices
